@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row">
+  <form class="m-4 col align-items-center" action="" method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{form_s.as_p}}
+      <input type="submit" value="Añadir">
+  </form>
+</div>
+{% endblock content %}

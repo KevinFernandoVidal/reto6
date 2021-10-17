@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="row">
+      <div class="col col-6 m-2">
+        <h3>Lista de categoria</h3>
+          <div class="list-group">
+            {%for obj in object%}
+                <a href="{%url 'lista_categoria' obj.id %}" class="list-group-item list-group-item-action">{{obj.nombre}}</a>
+            {%endfor%}
+          </div>
+      </div>
+      <div class="col col-5 m-2">{{m | safe}}</div>
+  </div>
+{% endblock content %}
